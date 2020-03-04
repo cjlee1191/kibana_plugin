@@ -1,0 +1,9 @@
+{
+  "paths": {
+    "newTestPlugin": "./"
+  },
+  "translations": [
+    "translations/zh-CN.json"
+  ]
+}
+
