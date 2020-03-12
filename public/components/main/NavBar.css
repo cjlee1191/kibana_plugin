@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(175, 170, 175);
+    margin-top: -47px;
+    margin-left: -25px;
+    width: 100vw;
+    margin-bottom: 25px;
+}
+
+.status:hover {
+    color: white;
+    text-decoration: underline;
+}
+.apply:hover {
+    color: white;
+    text-decoration: underline;
+}
+.home:hover {
+    color: white;
+    text-decoration: underline;
+}
+.statusmodal{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}

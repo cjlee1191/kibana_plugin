@@ -35,6 +35,7 @@ import './main.css';
 import Error from './../Error';
 import Editor from './Editor';
 import { EuiHeader } from '@elastic/eui';
+import NavBar from './NavBar';
 
 export class Main extends React.Component {
   constructor(props) {
@@ -586,19 +587,6 @@ export class Main extends React.Component {
       );
     }
 
-    let radios = [
-      {
-        id: `AND`,
-        label: 'AND',
-        className: 'and',
-      },
-      {
-        id: `OR`,
-        label: 'OR',
-        className: 'or',
-      },
-    ];
-
     let advancedSearchModal;
     if (this.state.isAdvancedSearchModalVisible) {
       advancedSearchModal = (
@@ -707,14 +695,11 @@ export class Main extends React.Component {
             <EuiPageContentHeader></EuiPageContentHeader>
             <EuiPageContentBody>
               <EuiText>
-                <h1 className="headerStyle">Document Tagging Plugin Test</h1>
-                <p>
-                  <FormattedMessage
-                    id="newTestPlugin.serverTimeText"
-                    defaultMessage="This page was loaded at {time}"
-                    values={{ time: this.state.time || 'NO API CALL YET' }}
-                  />
-                </p>
+                <NavBar 
+                totalHits={this.state.totalDocs}
+                status={this.state.result}
+                />
+                {/* <h1 className="headerStyle">Document Tagging Plugin Test</h1> */}
                 <span>Elasticsearch cluster health: </span>{' '}
                 <span style={statusStyle}> {this.state.result}</span>
                 <p>Total Documents indexed in Elasticsearch: {this.state.totalDocs}</p>

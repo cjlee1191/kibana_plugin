@@ -11,14 +11,12 @@
   
   .resultStyle {
     border: 2px solid black;
-    background-color: #938E94;
+    background-color: white;
     margin: 5px auto;
     padding: 10px;
     width: 90%
    
-    
-  
- }
+    }
 
   .searchBarStyles {
     display: flex;
@@ -95,19 +93,19 @@
 
     }
     .exportButtonStyle:hover{
-        background-color: #628aa7;
+        background-color: #568cb3;
         color: white;
         border:0.1em solid white ;
         cursor: pointer;
     }
 
   .background{
-    background-color: #e8e6e6;
+    background-color: rgb(245, 234, 234);
     text-align: center;
   }
 
   .headerStyle {
-    font-family: copperplate gothic;
+    font-family: 'Times New Roman', Times, serif;
   }
 
 
