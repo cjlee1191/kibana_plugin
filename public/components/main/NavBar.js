@@ -3,10 +3,8 @@ import './NavBar.css';
 import {
 EuiOverlayMask,
 EuiModal,
-EuiModalHeader,
 EuiModalFooter,
 EuiModalBody,
-EuiModalHeaderTitle,
 EuiButtonEmpty
 }from '@elastic/eui';
 

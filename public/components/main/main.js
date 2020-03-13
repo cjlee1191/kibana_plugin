@@ -27,7 +27,8 @@ import {
   EuiDatePicker,
   EuiDatePickerRange,
   EuiRadioGroup,
-  EuiLoadingSpinner,
+  EuiLoadingChart,
+  EuiToolTip
 } from '@elastic/eui';
 
 import { FormattedMessage } from '@kbn/i18n/react';
@@ -631,9 +632,23 @@ export class Main extends React.Component {
         <span className="result1">
           <strong>ID: </strong>
           {i._id}{' '}
-          <button onClick={this.bookmarkId} id={i._id} className="tagButtonStyle">
+          {/* <button onClick={this.bookmarkId} id={i._id} className="tagButtonStyle">
             Bookmark
-          </button>
+          </button> */}
+        
+       
+        <EuiToolTip position="right" content="Click to save">
+           <EuiIcon type='save' 
+                   onClick={this.bookmarkId} 
+                   onMouseOver={this.onMouseOver}
+                   id={i._id} 
+                   className="save_icon"
+                   size='l'
+          />
+        </EuiToolTip>
+  
+         
+     
           <br />
           <strong>Location Info: </strong>
           <br />
@@ -792,7 +807,7 @@ export class Main extends React.Component {
                 {bulkTagModal}
                 {this.state.isLoading ? (
                   <div>
-                    <EuiLoadingSpinner size="xl" />
+                    <EuiLoadingChart size="xl" />
                   </div>
                 ) : (
                   results
